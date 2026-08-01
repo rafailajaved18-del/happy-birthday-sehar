@@ -83,3 +83,52 @@ footer{
   color:#ff2e88;
   font-weight:bold;
 }
+.gallery img{
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-10px);
+  }
+  100%{
+    transform:translateY(0);
+  }
+}
+
+.letter{
+  animation: show 1.5s ease;
+}
+
+@keyframes show{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+body:before{
+  content:"❤️ ✨ 💕 ✨ ❤️";
+  position:fixed;
+  top:10px;
+  left:0;
+  width:100%;
+  font-size:25px;
+  animation:move 8s linear infinite;
+}
+
+@keyframes move{
+  from{
+    transform:translateX(-100%);
+  }
+  to{
+    transform:translateX(100%);
+  }
+}
