@@ -1,4 +1,7 @@
 function openGift(){
+    let music = document.getElementById("music");
+music.play();
+   
     document.querySelector(".loading").style.display="none";
     document.getElementById("main").style.display="block";
 
