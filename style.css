@@ -132,3 +132,12 @@ body:before{
     transform:translateX(100%);
   }
 }
+@keyframes heartFall{
+  from{
+    opacity:1;
+  }
+  to{
+    opacity:0;
+    transform:translateY(-100px);
+  }
+}
