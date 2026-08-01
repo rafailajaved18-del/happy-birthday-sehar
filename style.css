@@ -1,0 +1,38 @@
+body{
+margin:0;
+font-family:Poppins,sans-serif;
+background:linear-gradient(135deg,#ffd6e8,#ffeef8,#fff);
+text-align:center;
+overflow-x:hidden;
+}
+
+h1{
+font-size:60px;
+color:#ff2e88;
+margin-top:40px;
+}
+
+p{
+font-size:20px;
+color:#555;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:30px;
+max-width:1200px;
+margin:auto;
+}
+
+.gallery img{
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
