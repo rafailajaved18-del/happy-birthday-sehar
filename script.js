@@ -15,9 +15,10 @@ openBtn.addEventListener("click", () => {
 
     music.play();
 
-    createHearts();
-    createButterflies();
-    createSparkles();
+   createHearts();
+createButterflies();
+createSparkles();
+launchConfetti(); 
 
 });
 // ==============================
