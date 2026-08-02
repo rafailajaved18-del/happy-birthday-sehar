@@ -103,3 +103,47 @@ document.querySelector(".sparkles").appendChild(sparkle);
 }
 
 }
+// ==============================
+// 🎊 Confetti
+// ==============================
+
+function launchConfetti(){
+
+for(let i=0;i<120;i++){
+
+const confetti=document.createElement("div");
+
+confetti.innerHTML="🎉";
+
+confetti.style.position="fixed";
+
+confetti.style.left=Math.random()*100+"vw";
+
+confetti.style.top="-20px";
+
+confetti.style.fontSize=(15+Math.random()*20)+"px";
+
+confetti.style.zIndex="9999";
+
+confetti.style.transition="transform 4s linear, opacity 4s";
+
+document.body.appendChild(confetti);
+
+setTimeout(()=>{
+
+confetti.style.transform=
+`translateY(${window.innerHeight+100}px) rotate(${Math.random()*720}deg)`;
+
+confetti.style.opacity="0";
+
+},100);
+
+setTimeout(()=>{
+
+confetti.remove();
+
+},4500);
+
+}
+
+}
