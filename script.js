@@ -1,30 +1,51 @@
-function openGift(){
+// ==============================
+// Open Surprise Button
+// ==============================
 
-let music = document.getElementById("music");
-music.play();
+const openBtn = document.getElementById("openBtn");
+const welcome = document.getElementById("welcome");
+const birthday = document.getElementById("birthday");
+const music = document.getElementById("music");
 
-document.querySelector(".loading").style.display="none";
-document.getElementById("main").style.display="block";
+openBtn.addEventListener("click", () => {
 
-for(let i=0;i<80;i++){
-    let heart=document.createElement("div");
-    heart.innerHTML="💖";
-    heart.style.position="fixed";
-    heart.style.left=Math.random()*100+"%";
-    heart.style.top="100%";
-    heart.style.fontSize=(20+Math.random()*25)+"px";
-    heart.style.pointerEvents="none";
-    heart.style.transition="all 6s linear";
+    welcome.style.display = "none";
 
-    document.body.appendChild(heart);
+    birthday.style.display = "flex";
 
-    setTimeout(()=>{
-        heart.style.top="-10%";
-    },100);
+    music.play();
 
-    setTimeout(()=>{
-        heart.remove();
-    },6000);
+    createHearts();
+    createButterflies();
+    createSparkles();
+
+});
+// ==============================
+// Floating Hearts
+// ==============================
+
+function createHearts(){
+
+setInterval(()=>{
+
+const heart=document.createElement("span");
+
+heart.classList.add("heart");
+
+heart.innerHTML="💖";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=4+Math.random()*5+"s";
+
+document.querySelector(".hearts").appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},9000);
+
+},300);
+
 }
-
-} 
