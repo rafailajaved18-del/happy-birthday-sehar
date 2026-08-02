@@ -80,3 +80,26 @@ butterfly.remove();
 },2500);
 
 }
+// ==============================
+// ✨ Sparkles
+// ==============================
+
+function createSparkles(){
+
+for(let i=0;i<60;i++){
+
+const sparkle=document.createElement("span");
+
+sparkle.classList.add("sparkle");
+
+sparkle.style.left=Math.random()*100+"vw";
+
+sparkle.style.top=Math.random()*100+"vh";
+
+sparkle.style.animationDelay=Math.random()*3+"s";
+
+document.querySelector(".sparkles").appendChild(sparkle);
+
+}
+
+}
