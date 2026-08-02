@@ -1,41 +1,40 @@
+/* ======================================
+   GOOGLE FONTS
+====================================== */
 
-/* ==========================
-   Google Font
-========================== */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap');
-
-/* ==========================
-   Reset
-========================== */
+/* ======================================
+   RESET
+====================================== */
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
 
-font-family:'Poppins',sans-serif;
+    font-family:'Poppins',sans-serif;
 
-background:linear-gradient(135deg,#ffd6ec,#f6d0ff,#fff0f8);
+    background:linear-gradient(135deg,#ffd6ec,#f7dcff,#ffeef8);
 
-min-height:100vh;
+    overflow-x:hidden;
 
-overflow-x:hidden;
+    color:#ffffff;
 
-color:white;
+    min-height:100vh;
 
 }
 
-/* ==========================
-Background Animation
-========================== */
+/* ======================================
+   BACKGROUND
+====================================== */
 
 body::before{
 
@@ -43,35 +42,34 @@ content:"";
 
 position:fixed;
 
-width:100%;
-
-height:100%;
-
 top:0;
 left:0;
 
+width:100%;
+height:100%;
+
 background:
 
-radial-gradient(circle at 20% 30%,rgba(255,255,255,.35),transparent 25%),
+radial-gradient(circle at 20% 20%,rgba(255,255,255,.35),transparent 20%),
 
-radial-gradient(circle at 80% 20%,rgba(255,182,193,.35),transparent 25%),
+radial-gradient(circle at 80% 30%,rgba(255,182,193,.30),transparent 25%),
 
-radial-gradient(circle at 60% 80%,rgba(255,255,255,.25),transparent 25%);
+radial-gradient(circle at 50% 80%,rgba(255,255,255,.25),transparent 20%);
 
 z-index:-2;
 
-animation:bgMove 10s linear infinite;
+animation:backgroundMove 12s linear infinite;
 
 }
 
-@keyframes bgMove{
+@keyframes backgroundMove{
 
 0%{
 transform:translateY(0px);
 }
 
 50%{
-transform:translateY(-20px);
+transform:translateY(-25px);
 }
 
 100%{
@@ -80,37 +78,47 @@ transform:translateY(0px);
 
 }
 
-/* ==========================
-Welcome Section
-========================== */
+/* ======================================
+   SECTION
+====================================== */
 
-#welcome{
+section{
 
-height:100vh;
+width:100%;
+
+min-height:100vh;
 
 display:flex;
-
-flex-direction:column;
 
 justify-content:center;
 
 align-items:center;
 
+flex-direction:column;
+
+padding:30px;
+
 text-align:center;
 
-padding:20px;
-
 }
+
+/* ======================================
+   WELCOME SCREEN
+====================================== */
 
 #welcome h1{
 
 font-family:'Great Vibes',cursive;
 
-font-size:65px;
+font-size:75px;
 
-color:white;
+color:#fff;
 
-text-shadow:0 0 20px hotpink;
+text-shadow:
+
+0 0 15px hotpink,
+
+0 0 35px deeppink;
 
 margin-bottom:20px;
 
@@ -118,81 +126,65 @@ margin-bottom:20px;
 
 #welcome p{
 
-font-size:20px;
+font-size:22px;
 
-color:white;
-
-margin-bottom:30px;
+margin-bottom:35px;
 
 }
 
-/* ==========================
-Open Button
-========================== */
+/* ======================================
+   BUTTON
+====================================== */
 
 #openBtn{
 
 padding:18px 45px;
 
-font-size:20px;
-
 border:none;
 
-border-radius:50px;
-
-cursor:pointer;
+border-radius:60px;
 
 background:white;
 
 color:#ff1493;
 
+font-size:20px;
+
 font-weight:bold;
+
+cursor:pointer;
 
 transition:.4s;
 
-box-shadow:0 10px 30px rgba(255,105,180,.45);
+box-shadow:0 10px 35px rgba(255,105,180,.45);
 
 }
 
 #openBtn:hover{
 
-transform:scale(1.08);
-
 background:#ff1493;
 
 color:white;
 
+transform:scale(1.08);
+
 }
 
-/* ==========================
-Birthday Section
-========================== */
+/* ======================================
+   BIRTHDAY PAGE
+====================================== */
 
 #birthday{
 
 display:none;
 
-height:100vh;
-
-justify-content:center;
-
-align-items:center;
-
-flex-direction:column;
-
-text-align:center;
-
-padding:20px;
-
 }
 
 #birthday h2{
 
-font-size:40px;
+font-size:42px;
 
 margin-bottom:15px;
-
-color:white;
 
 text-shadow:0 0 15px deeppink;
 
@@ -202,15 +194,17 @@ text-shadow:0 0 15px deeppink;
 
 font-family:'Great Vibes',cursive;
 
-font-size:90px;
+font-size:95px;
 
-color:#fff;
+color:white;
 
 text-shadow:
 
 0 0 20px hotpink,
 
-0 0 40px deeppink;
+0 0 40px deeppink,
+
+0 0 70px violet;
 
 margin-bottom:20px;
 
@@ -220,18 +214,8 @@ margin-bottom:20px;
 
 font-size:22px;
 
-max-width:700px;
-
 line-height:1.8;
 
-}
-
-/* ==========================
-Hidden
-========================== */
-
-.hidden{
-
-display:none;
+max-width:700px;
 
 }
