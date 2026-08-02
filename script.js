@@ -49,3 +49,34 @@ heart.remove();
 },300);
 
 }
+// ==============================
+// 🦋 Floating Butterflies
+// ==============================
+
+function createButterflies(){
+
+setInterval(()=>{
+
+const butterfly=document.createElement("span");
+
+butterfly.classList.add("butterfly");
+
+butterfly.innerHTML="🦋";
+
+butterfly.style.top=Math.random()*80+"vh";
+
+butterfly.style.left="-50px";
+
+butterfly.style.animationDuration=8+Math.random()*6+"s";
+
+document.querySelector(".butterflies").appendChild(butterfly);
+
+setTimeout(()=>{
+
+butterfly.remove();
+
+},14000);
+
+},2500);
+
+}
